@@ -1,9 +1,9 @@
 'use client';
 
+import { Loader } from '@/components/loader';
 import ProductGridSection from '@/components/product-grid-section';
 import { Button } from '@/components/ui/button';
 import { useLatestProducts } from '@/hooks/useProducts';
-import { LoaderCircle } from 'lucide-react';
 
 export default function Home() {
   const { error, status } = useLatestProducts();
@@ -35,7 +35,3 @@ export default function Home() {
     </main>
   );
 }
-
-export const Loader = () => {
-  return <LoaderCircle className="size-10 animate-spin" />;
-};
